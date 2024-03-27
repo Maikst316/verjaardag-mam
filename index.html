@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom's Birthday Celebration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Verjaardag Anke</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="feest.html">Foto's feest</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About</h2>
+            <p>Welcome to our website dedicated to celebrating Mom's birthday! We're glad you're here to share in the memories and joy.</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <!-- Your images will go here -->
+                <img src="fotos/2011 (240).jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you have any questions or would like to send Mom a birthday message, feel free to reach out to us!</p>
+            <form action="save_message.php" method="post" onsubmit="return displayThankYouMessage()">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            
+            <script>
+            function displayThankYouMessage() {
+                alert("Bedankt voor het berichtje!");
+                return true; // Allow form submission to proceed
+            }
+            </script>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Maik Steijns, 2024</p>
+        </div>
+    </footer>
+</body>
+</html>
